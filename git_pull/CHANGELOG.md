@@ -1,5 +1,17 @@
 # Changelog
 
+## 9.1.0
+
+- Update base image to Alpine 3.24
+- Publish app to GHCR
+
+## 9.0.4
+
+- Fix HTTPS authentication with `deployment_user`/`deployment_password`
+  always failing with `fatal: refusing to work with credential missing host
+  field`. The credentials were piped only to `git credential approve`, while
+  `git credential fill` ran with empty input.
+
 ## 9.0.3
 
 - Fix `git-clone`'s restore-after-clone step copying a stale/corrupt `.git`
